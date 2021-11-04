@@ -67,7 +67,7 @@ const LogIn=() =>{
                             opacity:0.7,
                             marginTop:20
                         }}>
-                            <Text style={{fontWeight:'bold',color:'#a9c26e',fontSize:28}}>Login</Text>
+                            <Text style={{fontWeight:'bold',color:'#a9c26e',fontSize:28}}>Sign In</Text>
 
                         </TouchableOpacity>
                     </SafeAreaView>
