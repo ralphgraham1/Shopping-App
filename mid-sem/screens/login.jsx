@@ -1,8 +1,9 @@
 import React from "react";
-import { View,Text,Image,TextInput,TouchableOpacity,ImageBackground} from "react-native";
+import { View,Text,Image,TextInput,TouchableOpacity,ImageBackground,Button} from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { AntDesign } from "@expo/vector-icons";
+
 
 
 
@@ -67,7 +68,7 @@ const LogIn=() =>{
                             opacity:0.7,
                             marginTop:20
                         }}>
-                            <Text style={{fontWeight:'bold',color:'#a9c26e',fontSize:28}}>Sign In</Text>
+                            <Button style={{fontWeight:'bold',color:'#a9c26e',fontSize:28}}>Sign In</Button>
 
                         </TouchableOpacity>
                     </SafeAreaView>
