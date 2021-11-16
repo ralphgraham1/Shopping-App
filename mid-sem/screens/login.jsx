@@ -9,7 +9,7 @@ import { AntDesign } from "@expo/vector-icons";
 
 const LogIn=() =>{
     return(
-        <ImageBackground style={{flex:1,alignItems:"center",opacity:0.7}}source={require('../assets/Images/login.jpg')} >
+       
             <SafeAreaView style={{
                 flex:1,alignItems:"center",justifyContent:"center"
             }}>
@@ -75,7 +75,7 @@ const LogIn=() =>{
                 </SafeAreaView>
             </SafeAreaView>
  
-        </ImageBackground>
+        
     )
 }
 export default LogIn;
