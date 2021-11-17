@@ -14,9 +14,10 @@ const styles= StyleSheet.create({
 
     },
     image:{
-       flex:2,
-        height:200,
-        resizeMode:'contain'
+       
+        height:100,
+        resizeMode:'cover',
+        width:100,
         
         
     },
