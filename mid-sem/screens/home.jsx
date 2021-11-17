@@ -7,19 +7,24 @@ import Products from "../Components/products";
 import Search from "../Components/searchbox";
 import products from "../Components/data/products";
 
-const Homepage=()=>{
+const Homepage=({navigation})=>{
     const color=useColorScheme();
-    const renderItem=({item})=>(
-        <Products item={item}/>
-    )
+    const renderItem = ({item})=>(
+        <Products navigation={navigation} item={item}/>
+    );
     return (
         <SafeAreaView style={styles.page}>
             {/*Render a product Component*/}
             <Search/>
-            <FlatList
+            {/* <FlatList
                 data={products}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
+            /> */}
+            <FlatList
+            data={products}
+            renderItem= {renderItem}
+            keyExtractor={item=>item.id}
             />
         </SafeAreaView>
     )

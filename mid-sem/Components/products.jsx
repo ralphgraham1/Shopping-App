@@ -4,18 +4,22 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Octicons } from "@expo/vector-icons";
 import styles from "./styles";
+import { NavigationContainer } from "@react-navigation/native";
 
 
 
 
 
 
-const Products=({item})=>{
+const Products=({item,navigation})=>{
     return (
-        <SafeAreaView style={styles.main}>
-        <Image style={styles.image} source={require(item.image)}/>
+        <TouchableOpacity onPress={()=>{
+            navigation.navigate("ProductScreen", {item:item})
+        }}>
+             <SafeAreaView style={styles.main}>
+        <Image style={styles.image} source={item.image} />
         <SafeAreaView stlye={styles.right}>
-            <Text stlye={styles.text1} numberOfLines={4}> {item.name}</Text>
+            <Text stlye={styles.text1} numberOfLines={4}> {item.title}</Text>
             <SafeAreaView style={styles.rating}>
                <Octicons style={styles.star} name='star' size={18} color='#ebb207'/>
                <Octicons style={styles.star} name='star' size={18} color='#ebb207'/>
@@ -27,6 +31,8 @@ const Products=({item})=>{
             <Text style={styles.text2}>{item.price}</Text>
         </SafeAreaView>
    </SafeAreaView>
+        </TouchableOpacity>
+       
     )
 }
 

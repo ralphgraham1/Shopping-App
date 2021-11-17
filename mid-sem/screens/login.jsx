@@ -7,7 +7,7 @@ import { AntDesign } from "@expo/vector-icons";
 
 
 
-const LogIn=() =>{
+const LogIn=({navigation}) =>{
     return(
        
             <SafeAreaView style={{
@@ -58,7 +58,9 @@ const LogIn=() =>{
                         </SafeAreaView>
                     </SafeAreaView>
                     <SafeAreaView>
-                        <TouchableOpacity style={{
+                        <TouchableOpacity
+                        onPress={()=>navigation.navigate('home')}
+                        style={{
                             width:300,
                             height:60,
                             alignItems:'center',
@@ -68,7 +70,7 @@ const LogIn=() =>{
                             opacity:0.7,
                             marginTop:20
                         }}>
-                            <Button style={{fontWeight:'bold',color:'#a9c26e',fontSize:28}}>Sign In</Button>
+                            <Text style={{fontWeight:'bold',color:'#a9c26e',fontSize:28}}>Sign In</Text>
 
                         </TouchableOpacity>
                     </SafeAreaView>
